@@ -10,10 +10,12 @@ body{
 }
 
 #main{
+    min-height: 100vh;
     display: flex;
 }
 
 #left{
+    position: relative;
     width: 40%;
     height: 100vh;
 }
@@ -21,31 +23,46 @@ body{
 #right{
     width: 60%;
     height: 100vh;
-    background-color: blue;
 }
 
 #rtop{
     display: flex;
     height: 50%;
     width: 100%;
-    background-color: pink;
 }
 #rbottom{
     height: 50%;
     width: 100%;
+}
 
+#rbottom img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 #topleft{
     height: 100%;
     width: 55%;
-    background-color: powderblue;
+}
+
+#topleft img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 #topright{
     height: 100%;
     width: 45%;
-    background-color: royalblue;
+}
+
+#topright img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 #navleft{
@@ -53,4 +70,50 @@ body{
     justify-content: space-between;
     width: 100%;
     padding: 20px 30px;
+}
+
+#navpart2{
+    position: relative;
+    display: flex;
+    align-items: center; 
+    gap: 4vh; 
+}
+
+#navpart2 a{
+    overflow: hidden;
+    position: relative;
+    transition: all ease .4s;
+    
+}
+
+#navpart2 a::after{
+    content: '';
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    left: -100%;
+    height: 2px;
+    background-color: black
+}
+
+#navpart2 a:hover::after{
+    left: 0;
+    transition: all ease-in-out .3s;
+     
+}
+
+#navpart2 a,i {
+    text-decoration: none;
+    color: #050505;
+}
+
+#navpart2 i{
+    color: royalblue;
+}
+#left h1{
+    position: absolute;
+    top: 20%;
+    left: 10%;
+    transform: translate(50%,50%);
+    font-size: 10vh;
 }
