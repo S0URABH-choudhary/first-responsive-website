@@ -33,7 +33,7 @@ body{
 #rbottom{
     height: 50%;
     width: 100%;
-    background-color: ;
+
 }
 
 #topleft{
@@ -46,4 +46,11 @@ body{
     height: 100%;
     width: 45%;
     background-color: royalblue;
+}
+
+#navleft{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 20px 30px;
 }
